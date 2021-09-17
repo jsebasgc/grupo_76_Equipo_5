@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi primera pagina web</title>
+
+    <title>free-canchas</title>
 </head>
 
 <body>
@@ -27,19 +28,12 @@
         .header-section {
             margin-bottom: 100px;
         }
-
         .header-container{
             display: flex;
             flex-wrap: wrap;
             justify-content: space-around;
-            text-align: center;
-
+            text-align: left;
         }
-
-        .site-title {
-            width: 30%;
-        }
-
         .site-nav {
             width: 40%;
             display: flex;
@@ -58,22 +52,26 @@
         }
 
         .logo-container {
-            width: 30%;
+            width: 50%;
         }
 
         .logo-container__site-logo {
-            height: 80px;
+            height: 60px;
         }
 
         .banner {
             width: 100%;
-        }
-
-        .banner>img {
-            width: 100%;
+            background-image: url("banner2.jpg");
             height: 400px;
-            max-width: 1400px;
-            object-fit: cover;
+            max-width: 1350px;
+        }
+        .letra{
+            font-size: 4rem;
+            font-weight: bold;
+            padding-top: 5%;
+            padding-left: 8%;
+            color:rgb(255, 255, 255);
+            -webkit-text-stroke: 3px rgb(0, 0, 0);
         }
 
         .services-section,
@@ -137,38 +135,30 @@
             margin-left: auto;
         }
     </style>
-
+<!--#################################################################################################
+#####################################################################################################-->
 <!-- inicio encabezado del sitio -->
-    <div class="header-section">
+    <header class="header-section">
         <div class="header-container">
-
-            <div class="site-title">
-                <h1>Una web</h1>
+            <div class="logo-container">
+                <img class="logo-container__site-logo" src="./logofreecanchas.png" alt="Logo MisionTic 2022">
             </div>
-            
             <!-- Inicio menú navegación -->
-            <ul class="site-nav">
+            <nav class="site-nav">
                 <a href="#">Inicio</a>
                 <a href="#services">Servicios</a>
                 <a href="#news">Noticias</a>
                 <a href="#team">Nuestro equipo</a>
-            </ul>
+            </nav>
             <!-- Fin menú navegación -->
-
-            
-            
-            <div class="logo-container">
-                <img class="logo-container__site-logo" src="./logomision.png" alt="Logo MisionTic 2022">
-            </div>
         </div>
-            
-        <div class="banner">
-            <img src="./banner.jpg" alt="A banner image">
+        <div class="banner letra">
+            <h1>free canchas</h1>
         </div>
-    </div>
+    </header>
 <!-- fin encabezado del sitio -->
-
-
+<!--#####################################################################################################################
+#########################################################################################################################-->
     <!-- inicio contenido principal -->
     <div>
 
