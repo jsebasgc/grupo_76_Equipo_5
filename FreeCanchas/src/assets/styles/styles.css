@@ -3,6 +3,10 @@
 	font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
+html {
+	scroll-behavior: smooth;
+}
+
 body {
 	max-width: 1400px;
 	min-width: 375px;
