@@ -19,7 +19,9 @@ body {
 
 /* ########################## INICIO HEADER ########################## */
 .header-section {
-	margin-bottom: 100px;
+	position: sticky;
+	top: 0;
+	z-index: 10;
 }
 
 .header-container {
@@ -60,6 +62,7 @@ body {
 	background-image: url("/FreeCanchas/src/assets/images/banner2.jpg");
 	height: 400px;
 	max-width: 1350px;
+	margin-bottom: 100px;
 }
 
 .letra {
