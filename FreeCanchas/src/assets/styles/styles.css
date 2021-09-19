@@ -77,9 +77,14 @@ body {
 }
 
 /* ########################## INICIO SERVICIOS ########################## */
+.services-section {
+	justify-content: space-between;
+}
+
 .services-info {
 	padding: 20px;
 	text-align: center;
+	width: 400px;
 }
 
 .services-info__imagen {
@@ -89,6 +94,10 @@ body {
 	border-radius: 50%;
 	margin-right: auto;
 	margin-left: auto;
+}
+
+.services-info__text {
+	text-align: left;
 }
 
 /* ########################## FIN SERVICIOS ########################## */
