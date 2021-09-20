@@ -138,7 +138,7 @@ body {
 /* ########################## INICIO FOOTER ########################## */
 .seccion-pie {
 	background-color: #0f7e31;
-	height: 200px;
+	height: fit-content;
 	display: flex;
 	color: white;
 	justify-content: space-evenly;
@@ -156,34 +156,43 @@ body {
 	width: 250px;
 	height: 250px;
 }
-.facebook_icon{
+.facebook_icon {
 	width: 10vh;
 	height: 10vh;
 }
-.twitter_icon{
+.twitter_icon {
 	width: 10vh;
 	height: 10vh;
 }
-.instagram_icon{
+.instagram_icon {
 	width: 10vh;
 	height: 10vh;
 }
-.telephone_icon{
+.telephone_icon {
 	width: 4.5vh;
 	height: 4.5vh;
 	float: left;
 	margin-left: 5px;
 }
-.email_icon{
+.email_icon {
 	width: 4.5vh;
 	height: 4.5vh;
 	float: left;
 	margin-left: 5px;
 }
-.ubication_icon{
+.ubication_icon {
 	width: 5vh;
 	height: 5vh;
 	float: left;
 	margin-left: 5px;
+}
+
+.seccion-pie article p {
+	display: flex;
+	align-items: center;
+}
+
+.seccion-pie article p img {
+	margin-right: 10px;
 }
 /* ########################## FIN FOOTER ########################## */
