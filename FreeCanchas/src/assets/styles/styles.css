@@ -59,7 +59,7 @@ body {
 
 .banner {
 	width: 100%;
-	background-image: url("/FreeCanchas/src/assets/images/banner2.jpg");
+	background-image: url("../images/banner2.jpg");
 	height: 400px;
 	max-width: 1350px;
 	margin-bottom: 100px;
