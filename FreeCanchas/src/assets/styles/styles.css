@@ -156,4 +156,34 @@ body {
 	width: 250px;
 	height: 250px;
 }
+.facebook_icon{
+	width: 10vh;
+	height: 10vh;
+}
+.twitter_icon{
+	width: 10vh;
+	height: 10vh;
+}
+.instagram_icon{
+	width: 10vh;
+	height: 10vh;
+}
+.telephone_icon{
+	width: 4.5vh;
+	height: 4.5vh;
+	float: left;
+	margin-left: 5px;
+}
+.email_icon{
+	width: 4.5vh;
+	height: 4.5vh;
+	float: left;
+	margin-left: 5px;
+}
+.ubication_icon{
+	width: 5vh;
+	height: 5vh;
+	float: left;
+	margin-left: 5px;
+}
 /* ########################## FIN FOOTER ########################## */
