@@ -8,14 +8,16 @@
     >
       <div class="d-flex align-center">
         <v-img
+        id="logo"
+          @click="home"
           alt="FreeCanchas Logo"
           class="shrink mr-2"
           contain
-          src="./assets/logofreecanchas.png"
+          src= "./assets/logofreecanchas.png"
           transition="scale-transition"
           width="300"
         />
-      <h1>Free Canchas</h1>
+      <h1 id="title">Free Canchas</h1>
       </div>
 
       
@@ -35,6 +37,24 @@ export default {
   data: () => ({
     //
   }),
+  methods:{
+        home(){
+            //Redirigir al inicio
+            this.$router.push('/');
+        }
+    }
 };
 </script>
+
+<style>
+#title{
+  font-size: 50px;
+  font-family:  sans-serif ;
+  font-style: oblique;
+}
+#logo{
+  cursor: pointer;
+}
+
+</style>
 

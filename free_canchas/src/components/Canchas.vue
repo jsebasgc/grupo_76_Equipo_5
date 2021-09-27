@@ -50,13 +50,7 @@
         <br>
         Número de cancha:
         <br>
-        Ubicación:
-        <br>
-        Tamaño:
-        <br>
-        Teléfono:
-        <br>
-        Horarios:
+        Disponibilidad:
         <br>
         Precio/Hora fin de semana:
         <br>
@@ -101,13 +95,7 @@
         <br>
         Número de cancha:
         <br>
-        Ubicación:
-        <br>
-        Tamaño:
-        <br>
-        Teléfono:
-        <br>
-        Horarios:
+        Disponibilidad:
         <br>
         Precio/Hora fin de semana:
         <br>
@@ -152,13 +140,7 @@
         <br>
         Número de cancha:
         <br>
-        Ubicación:
-        <br>
-        Tamaño:
-        <br>
-        Teléfono:
-        <br>
-        Horarios:
+        Disponibilidad:
         <br>
         Precio/Hora fin de semana:
         <br>
