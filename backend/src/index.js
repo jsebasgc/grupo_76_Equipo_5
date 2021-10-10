@@ -6,6 +6,8 @@ const CanchasRouter = require('./routers/canchasRouter');
 const mongoose = require("mongoose");
 //Importar modulo que contiene la url de la bd
 const database = require("./database/db");
+//Importar cors
+const cors = require("cors")
 
 
 class Server{
@@ -19,6 +21,7 @@ class Server{
         this.app.set("port", process.env.PORT || 3000);
         //Indicar que se manejaran solicitudes con informacion JSON
         this.app.use(express.json());
+        this.app.use(cors());
         //Rutas
         const router = express.Router();
         router.get("/", (req, res)=>{
