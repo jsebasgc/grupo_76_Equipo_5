@@ -12,7 +12,6 @@ export default new Vuex.Store({
       state.canchas = payload;
     },
     pushCanchas(state, payload) {
-      console.log({ payload });
       state.canchas.push(payload);
     },
   },
@@ -32,7 +31,7 @@ export default new Vuex.Store({
       });
       //Capturamos la cancha recien insertada
       const data = await peticion.json();
-      commit("pushCancha", data);
+      commit("pushCanchas", data);
     },
     async eliminarCancha({ commit }, obj) {
       const peticion = await fetch("http://localhost:3000/canchas", {
@@ -44,7 +43,6 @@ export default new Vuex.Store({
       });
     },
     async actualizarCancha({ commit }, objedit) {
-      console.log("entre");
       const peticion = await fetch("http://localhost:3000/canchas", {
         method: "PUT",
         headers: {
