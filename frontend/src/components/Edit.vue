@@ -9,6 +9,7 @@
             label="Nombre del complejo deportivo"
             :counter="50"
             ></v-text-field>
+            <!-- asdfd -->
 
             <v-text-field
             v-model="numCancha"
