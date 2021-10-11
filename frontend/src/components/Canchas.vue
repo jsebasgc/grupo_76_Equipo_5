@@ -1,8 +1,6 @@
 <template>
     <main>
-        <br>
-        <!---crear y atras--->
-        <div id="botones">
+        <div class="action-buttons">
             <v-btn color="blue-grey" class="ma-2 white--text" @click="atras">
             Atrás
             </v-btn>
@@ -10,10 +8,7 @@
             Crear
             </v-btn>
         </div>
-        <br>
-        <br>
-        <br>
-        <div id="cards">
+        <section id="cards">
             <cardCancha v-for="item in canchas" 
                 :key="item._id" 
                 :_id="item._id"
@@ -26,7 +21,7 @@
                 @actualizarCancha="actualizar"
             >
             </cardCancha>
-        </div>
+        </section>
     </main>
 </template>
 
@@ -84,20 +79,32 @@ export default {
 </script>
 
 <style>
+
+main{
+    display: flex;
+    flex-direction: column;
+    padding: 20px
+}
+
+.action-buttons{
+    display: flex;
+    align-self: flex-end;
+    margin-bottom: 20px;
+}
+
 #cards{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 10px;
 }
+
 #editar{
     background: green;
 }
+
 #eliminar{
     background-color: brown;
     
-}
-#botones{
-    float: right;
 }
 
 </style>
