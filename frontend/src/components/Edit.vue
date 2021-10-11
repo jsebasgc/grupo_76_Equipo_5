@@ -82,7 +82,7 @@ export default {
             //Redirigir a las canchas
             this.$router.push('/home');
         },
-        actualizar(_id){
+        actualizar(){
             if (this.$refs.form.validate()) {
                 let objCancha = {
                     complejoDeportivo: this.complejoDeportivo,
@@ -90,7 +90,8 @@ export default {
                     disponibilidad: this.disponibilidad,
                     phFds: this.phFds,
                     phEs: this.phEs,
-                    url: this.url
+                    url: this.url,
+                    id: this.$route.params.id
                 };
                 //Crear una persona; realiza solicitud post al backend
                 store.dispatch("actualizarCancha", objCancha).then(()=>{
@@ -101,6 +102,9 @@ export default {
                 this.$router.push('/home');
             }
         },
+    },
+    mounted(){
+        console.log(this.$route.params.id)
     }
 }
 </script>
