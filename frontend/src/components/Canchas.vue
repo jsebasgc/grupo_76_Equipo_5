@@ -1,56 +1,43 @@
 <template>
-    <div>
+    <main>
         <br>
         <!---crear y atras--->
-        <label id="botones">
+        <div id="botones">
             <v-btn color="blue-grey" class="ma-2 white--text" @click="atras">
-        Atrás
-        </v-btn>
+            Atrás
+            </v-btn>
             <v-btn class="ma-2" color="success" @click="crear">
-        Crear
-        <template v-slot:loader>
-            <span>Loading...</span>
-        </template>
-        </v-btn>
-
-        
-        </label>
-        <br><br>
+            Crear
+            </v-btn>
+        </div>
         <br>
-        
-        <label id="cards" v-for="item in canchas" :key="item._id">
-        <!--Card 1 de canchas---->
-            <v-card class="mx-auto" max-width="344">
-        <v-img src="https://www.eafit.edu.co/bienestar-universitario/deportes/infraestructura/SiteAssets/Paginas/canchas/cancha-futbol-grama.jpg" height="200px"></v-img>
-
-        <v-card-title>{{item.complejoDeportivo}}</v-card-title>
-
-        <v-card-subtitle>
-            <div>Número de cancha: {{item.numCancha}}</div>
-            <div>Disponibilidad: {{item.disponibilidad}}</div>
-            <div>Precio/Hora fin de semana: {{item.phFds}}</div>
-            <div>Precio/Hora entre semana: {{item.phEs}}</div>
-        </v-card-subtitle>
-
-        <v-card-actions>
-        <v-spacer></v-spacer>
-        <v-btn id="eliminar" color="white" text v-on:click="eliminar(item._id)">
-            Eliminar
-        </v-btn>
-        <v-spacer></v-spacer>
-        <v-btn id="editar" color="white" text v-on:click="actualizar(item._id)" >
-            Actualizar
-        </v-btn>
-        <v-spacer></v-spacer>
-        </v-card-actions>
-    </v-card>       
-    </label>
-    </div>
+        <br>
+        <br>
+        <div id="cards">
+            <cardCancha v-for="item in canchas" 
+                :key="item._id" 
+                :_id="item._id"
+                :complejoDeportivo="item.complejoDeportivo" 
+                :numCancha="item.numCancha" 
+                :disponibilidad="item.disponibilidad"
+                :phEs="item.phEs" 
+                :phFds="item.phFds"
+                @eliminarCancha="eliminar" 
+                @actualizarCancha="actualizar"
+            >
+            </cardCancha>
+        </div>
+    </main>
 </template>
 
 <script>
 import store from "../store/index.js"
+import CardCancha from "../components/CardCancha.vue"
+
 export default {
+    components:{
+        CardCancha
+    },
     props: ["cancha"],
     data: ()=>{
         return{
@@ -100,6 +87,7 @@ export default {
 #cards{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
 }
 #editar{
     background: green;
