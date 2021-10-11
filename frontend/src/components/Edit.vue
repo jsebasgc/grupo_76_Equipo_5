@@ -6,24 +6,19 @@
         <v-form ref="form" lazy-validation @submit.prevent="actualizarCancha(canchaActualizar)">
             <v-text-field
             v-model="canchaActualizar.complejoDeportivo"
-            
             label="Nombre del complejo deportivo"
-            :rules="rules"
             :counter="50"
-            
             ></v-text-field>
 
             <v-text-field
             v-model="numCancha"
             label="Número de la cancha"
-            :rules="rules"
             type="number"
             
             ></v-text-field>
 
             <v-select
             v-model="disponibilidad"
-            :rules="rules"
             :items="items"
             label="Disponibilidad"
             
@@ -32,7 +27,6 @@
             <v-text-field
             v-model="phFds"
             label="Precio fines de semana"
-            :rules="rules"
             
             type="number"
             ></v-text-field>
@@ -40,7 +34,6 @@
             <v-text-field
             v-model="phEs"
             label="Precio entre semana"
-            :rules="rules"
             
             type="number"
             ></v-text-field>
@@ -48,7 +41,6 @@
             <v-text-field
             v-model="url"
             label="URL Imagen de la Cancha"
-            :rules="rules"
             
             ></v-text-field>
 
@@ -91,7 +83,6 @@ export default {
             this.$router.push('/home');
         },
         actualizar(_id){
-            
             if (this.$refs.form.validate()) {
                 let objCancha = {
                     complejoDeportivo: this.complejoDeportivo,
@@ -109,7 +100,7 @@ export default {
                 alert("Cancha actualizada con éxito")
                 this.$router.push('/home');
             }
-        }
+        },
     }
 }
 </script>

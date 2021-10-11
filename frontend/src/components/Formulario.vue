@@ -9,7 +9,6 @@
             <v-text-field
             v-model="complejoDeportivo"
             label="Nombre del complejo deportivo"
-            :rules="rules"
             :counter="50"
             required
             ></v-text-field>
@@ -17,14 +16,12 @@
             <v-text-field
             v-model="numCancha"
             label="Número de la cancha"
-            :rules="rules"
             type="number"
             required
             ></v-text-field>
 
             <v-select
             v-model="disponibilidad"
-            :rules="rules"
             :items="items"
             label="Disponibilidad"
             required
@@ -33,7 +30,6 @@
             <v-text-field
             v-model="phFds"
             label="Precio fines de semana"
-            :rules="rules"
             required
             type="number"
             ></v-text-field>
@@ -41,7 +37,6 @@
             <v-text-field
             v-model="phEs"
             label="Precio entre semana"
-            :rules="rules"
             required
             type="number"
             ></v-text-field>

@@ -7,17 +7,15 @@
     >
         Atrás
     </v-btn>
-    <edit/>
+    <edit :id="this.$route.params.id"/>
   </div>
 </template>
 
 
 <script>
-import Edit from '../components/Edit.vue'
-
+  import Edit from '../components/Edit.vue'
   export default {
     name: 'actualizar',
-
     components: {
       Edit
     },
