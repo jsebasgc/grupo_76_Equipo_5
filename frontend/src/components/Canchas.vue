@@ -10,7 +10,7 @@
         </div>
         <section id="cards">
             <cardCancha v-for="item in canchas" 
-                :key="item._id" 
+                :key="item._id"
                 :_id="item._id"
                 :complejoDeportivo="item.complejoDeportivo" 
                 :numCancha="item.numCancha" 
@@ -18,7 +18,7 @@
                 :phEs="item.phEs" 
                 :phFds="item.phFds"
                 @eliminarCancha="eliminar" 
-                @actualizarCancha="actualizar"
+                @actualizarCancha="cargarActualizar"
             >
             </cardCancha>
         </section>
@@ -56,12 +56,8 @@ export default {
                 store.dispatch("cargarCanchas");
             });
         },
-        actualizar(id){
-            console.log("Actualizando->", id)
-            let obj = { id };
-            store.dispatch("actualizarCancha", obj).then(()=>{
-                this.$router.push('/actualizar');
-            });
+        cargarActualizar(cancha){
+            this.$router.push('/actualizar/'+ cancha);
         }
     },
     created: ()=>{
